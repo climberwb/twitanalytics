@@ -6,6 +6,7 @@ Dotenv.load
 
 
 class Tweet < ActiveRecord::Base
+  belongs_to :tweet_collection
 def self.make_tweet
   @client ||= Twitter::REST::Client.new do |config|
         config.consumer_key        = ENV.fetch('twitter_consumer_key')

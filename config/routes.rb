@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :tweets
+  resources :tweet_collections do 
+    resources :tweets
+  end
   root to:  'tweets', controller: 'tweets', action: :index
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

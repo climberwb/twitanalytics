@@ -9,8 +9,8 @@ class Tweet < ActiveRecord::Base
   belongs_to :tweet_collection
 def self.make_tweet
   @client ||= Twitter::REST::Client.new do |config|
-        config.consumer_key        = ENV.fetch('twitter_consumer_key')
-        config.consumer_secret     = ENV.fetch('twitter_secret_key')
+        config.consumer_key        = ENV['TWITTER_CONSUMER_KEY']#ENV.fetch('twitter_consumer_key')
+        config.consumer_secret     = ENV['TWITTER_SECRET_KEY']#ENV.fetch('twitter_secret_key')
       end
   @tweets = @client.search("#analytic", result_type: "recent", lang: "en").map do |tweet|
         { author: tweet.user.screen_name, text: tweet.text }

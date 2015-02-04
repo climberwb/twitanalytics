@@ -21,8 +21,10 @@ def self.make_tweet
     @pulled_tweet.save
   end
 end
-if Tweet.last.created_at.to_s.split(' ')[0] != Time.now.to_s.split(' ')[0] || Tweet.all ==nil
- Tweet.make_tweet
+
+ # if Tweet.last.created_at.to_s.split(' ')[0] != Time.now.to_s.split(' ')[0] 
+    Tweet.make_tweet
+  #end
 end
 #binding.pry
 end

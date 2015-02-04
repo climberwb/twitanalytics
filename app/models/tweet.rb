@@ -25,6 +25,6 @@ end
  # if Tweet.last.created_at.to_s.split(' ')[0] != Time.now.to_s.split(' ')[0] 
     Tweet.make_tweet
   #end
-end
+#end
 #binding.pry
 end

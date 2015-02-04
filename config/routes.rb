@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :tweets
+
   resources :tweet_collections do 
     resources :tweets
   end

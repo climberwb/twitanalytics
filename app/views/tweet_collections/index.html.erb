@@ -10,6 +10,7 @@
   <tbody>
     <% @tweet_collections.each do |tweet_collection| %>
       <tr>
+        <td>made at:<%=tweet_collection.created_at%></td>
         <td><%= link_to 'Show', tweet_collection %></td>
         <td><%= link_to 'Edit', edit_tweet_collection_path(tweet_collection) %></td>
         <td><%= link_to 'Destroy', tweet_collection, method: :delete, data: { confirm: 'Are you sure?' } %></td>

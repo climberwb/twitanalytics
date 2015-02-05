@@ -10,6 +10,7 @@ class TweetCollectionsController < ApplicationController
   # GET /tweet_collections/1
   # GET /tweet_collections/1.json
   def show
+    @all_tweets = set_tweet_collection.tweets
   end
 
   # GET /tweet_collections/new
@@ -25,7 +26,8 @@ class TweetCollectionsController < ApplicationController
   # POST /tweet_collections.json
   def create
     @tweet_collection = TweetCollection.new(tweet_collection_params)
-
+    Tweet.tweets.each {|t| @tweet_collection.tweets << t}
+    
     respond_to do |format|
       if @tweet_collection.save
         format.html { redirect_to @tweet_collection, notice: 'Tweet collection was successfully created.' }

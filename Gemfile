@@ -35,9 +35,11 @@ group :production do
    gem 'sqlite3'
  end
 
+gem 'dotenv-rails'
+
 gem 'json'
 gem 'twitter'
-gem 'dotenv'
+
 gem 'pry'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

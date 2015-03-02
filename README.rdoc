@@ -2,4 +2,3 @@
 
 This is a ruby on rails application that queries twitter data from the twitter api. It searches for 500 recent tweets with #analytics and inserts the tweets into a database. The home page is a form to create a new collection of tweets. The page is then redirected to the index of collections where you can edit, update, destroy or view each collection of tweets. Once a user is shown an individual twitter collection they have the choice to view, edit or delete indvidual tweets. 
 
-If given the time I would have it so the user can chose the amount of tweets he or she wanted to retrieve from twitter. I would also have the application check for duplicate information when a twitter collection was created. 
